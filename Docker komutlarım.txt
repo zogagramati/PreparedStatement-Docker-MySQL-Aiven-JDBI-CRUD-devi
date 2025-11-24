@@ -1,0 +1,22 @@
+Docker komutlarım
+
+1- CREATE DATABASE IF NOT EXISTS test_db;
+
+2- USE test_db;
+
+
+3- CREATE TABLE deniz_yazici (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ad VARCHAR(50) NOT NULL,
+    soyad VARCHAR(50) NOT NULL,
+    pozisyon VARCHAR(50),
+    maas DECIMAL(10, 2),
+    kayit_tarihi TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+4-INSERT INTO deniz_yazici (ad, soyad, pozisyon, maas) VALUES
+('Ahmet', 'Yılmaz', 'Yazılım Geliştirici', 15000.00),
+('Ayşe', 'Kaya', 'Test Uzmanı', 12000.00),
+('Mehmet', 'Demir', 'Proje Yöneticisi', 20000.00);
+
+5- DELETE FROM deniz_yazici WHERE id = 3;
